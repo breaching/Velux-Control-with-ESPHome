@@ -1,6 +1,6 @@
 # Velux Automation with ESP32 and KUX 100 Remote
 
-This guide explains how to control your Velux windows using an **ESP32 microcontroller** connected to a **KUX 100 remote**. By following this DIY solution, you can automate your Velux windows without purchasing the **VELUX ACTIVE with NETATMO hub**, which costs approximately **€129.99**.
+This guide explains how to control your Velux windows using an **ESP32 microcontroller** connected to a **KUX 100 remote**. By following this DIY solution, you can automate your Velux blinds without purchasing the **VELUX ACTIVE with NETATMO hub**, which costs approximately **€129.99**.
 
 ---
 
@@ -144,3 +144,24 @@ I came up with a PCB like this (very ugly, ngl), but it's working. The ESP32 is 
          - delay: 200ms  # Maintient le bouton pressé pendant 200 ms
          - output.turn_off: button_stop
    ```
+
+## Troubleshooting
+If you encounter any issues:
+- **No response from the Velux remote:**
+  - Ensure that your remote is paired to the blinds.
+  - Check that the transistors are connected correctly and the solder joints are solid.
+  - Ensure the ESP32 and KUX 100 remote share a **common ground**.
+- **ESP32 not responding in Home Assistant:**
+  - Verify the ESPHome configuration and network connectivity.
+  - Check logs in the ESPHome dashboard for errors.
+
+---
+
+## To-Do
+- **Design a Custom 3D-Printed Case**: Create a sleek and functional enclosure to house the ESP32, PCB, and wiring.
+- **Improve the PCB Design**: Develop a more compact and organized PCB layout.
+
+
+---
+
+If you have any questions or improvements, feel free to open an issue or submit a pull request to this repository!
