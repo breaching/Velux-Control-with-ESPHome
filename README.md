@@ -118,14 +118,13 @@ I came up with a PCB like this (very ugly, ngl), but it's working. The ESP32 is 
        pin: 17
        id: button_stop
    
-   # Switches pour contrôler les boutons
    switch:
      - platform: template
        name: "Velux UP"
        icon: "mdi:arrow-up"
        turn_on_action:
          - output.turn_on: button_up
-         - delay: 200ms  # Maintient le bouton pressé pendant 200 ms
+         - delay: 200ms  
          - output.turn_off: button_up
    
      - platform: template
@@ -133,7 +132,7 @@ I came up with a PCB like this (very ugly, ngl), but it's working. The ESP32 is 
        icon: "mdi:arrow-down"
        turn_on_action:
          - output.turn_on: button_down
-         - delay: 200ms  # Maintient le bouton pressé pendant 200 ms
+         - delay: 200ms  
          - output.turn_off: button_down
    
      - platform: template
@@ -141,7 +140,7 @@ I came up with a PCB like this (very ugly, ngl), but it's working. The ESP32 is 
        icon: "mdi:stop"
        turn_on_action:
          - output.turn_on: button_stop
-         - delay: 200ms  # Maintient le bouton pressé pendant 200 ms
+         - delay: 200ms
          - output.turn_off: button_stop
    ```
 
